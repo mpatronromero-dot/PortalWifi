@@ -1,0 +1,106 @@
+/* Reseteo básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo de la pantalla completa (COINCIDE CON EL FONDO DE LA IMAGEN) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Usamos el color de fondo blanco roto/crema de la imagen (#F0F0F0) */
+    background-color: #F0F0F0;
+}
+
+/* Tarjeta del formulario */
+.login-container {
+    /* Color de la tarjeta (COINCIDE CON EL BLANCO DE LA IMAGEN) */
+    background-color: #FFFFFF;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* Títulos y texto secundario (COINCIDE CON EL DORADO DE LA IMAGEN) */
+.login-container h2 {
+    /* Color dorado mate/lujo extraído de la imagen (#BF9B30) */
+    color: #BF9B30;
+    margin-bottom: 0.5rem;
+}
+
+.login-container p {
+    /* Usamos el mismo dorado, o uno un poco más claro, aquí el mismo (#BF9B30) */
+    color: #BF9B30;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Estilos de los campos de texto */
+.input-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    /* Texto de etiquetas también en dorado (#BF9B30) */
+    color: #BF9B30;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    /* Borde gris claro para que no compita */
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Borde dorado al enfocar (#BF9B30) */
+.input-group input:focus {
+    outline: none;
+    border-color: #BF9B30;
+}
+
+/* Estilo del botón (COINCIDE CON EL AZUL PROFUNDO DE LA IMAGEN) */
+button {
+    width: 100%;
+    padding: 0.8rem;
+    /* Color de fondo azul marino muy oscuro extraído de la imagen (#0D3052) */
+    background-color: #0D3052;
+    /* Color de texto blanco puro para el botón (#FFFFFF) */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    text-transform: uppercase; /* Para que coincida con 'RESERVE AHORA' */
+}
+
+button:hover {
+    /* Un tono un poco más claro del mismo azul para el hover (#0A2641) */
+    background-color: #0A2641;
+}
+
+/* Texto del pie de página */
+.footer-text {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    /* Texto legal también en dorado (#BF9B30) */
+    color: #BF9B30;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión a Internet</title>
+    <!-- Enlazamos el archivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Portal de Acceso WiFi</h2>
+        <p>Inicia sesión para navegar por internet</p>
+        
+        <!-- El atributo 'action' dependerá del router que uses (ej. MikroTik usa "$(link-login-only)") -->
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+            </div>
+            
+            <button type="submit">Conectar a Internet</button>
+        </form>
+        <p class="footer-text">Al conectarte, aceptas los términos y condiciones de uso de la red.</p>
+    </div>
+</body>
+</html>
