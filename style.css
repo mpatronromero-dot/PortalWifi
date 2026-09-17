@@ -6,14 +6,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Fondo de la pantalla completa*/
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Usamos el color de fondo blanco crema (#F0F0F0) */
-    background-color: #F0F0F0;
+    
+    /* Configuración de la imagen de fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fondo-hotel.jpg');
+    background-size: cover;                   /* Hace que la imagen cubra toda la pantalla sin deformarse */
+    background-position: center;              /* Centra la imagen */
+    background-repeat: no-repeat;             /* Evita que la imagen se repita como un mosaico */
 }
 
 /* Tarjeta del formulario */
