@@ -12,21 +12,59 @@
         <h2>Portal de Acceso WiFi</h2>
         <p>Inicia sesión para navegar por internet</p>
         
-        <!-- El atributo 'action' dependerá del router que uses (ej. MikroTik usa "$(link-login-only)") -->
-        <form action="/login" method="POST">
+            <form action="/login" method="POST">
             <div class="input-group">
                 <label for="username">Usuario</label>
                 <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
             </div>
             
             <div class="input-group">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                <label for="password">Numero de habitación</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su numero de habitación" required>
             </div>
             
             <button type="submit">Conectar a Internet</button>
         </form>
         <p class="footer-text">Al conectarte, aceptas los términos y condiciones de uso de la red.</p>
     </div>
+    
+<script>
+  // Extract URL parameters sent by UniFi Controller
+  const urlParams = new URLSearchParams(window.location.search);
+  const clientMac = urlParams.get('mac') || '00:00:00:00:00:00'; // Default value for testing
+
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    try {
+      const response = await fetch('http://localhost:5000/api/login-wifi', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          usuario: username,
+          contrasena: password,
+          mac: clientMac
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert('¡Conexión autorizada! Ya puedes navegar en Internet.');
+        // Opcional: Redirigir a una página de bienvenida
+      } else {
+        alert('Error de autenticación: ' + data.message);
+      }
+    } catch (error) {
+      console.error('Error al conectar con el servidor:', error);
+      alert('Ocurrió un error al procesar la solicitud.');
+    }
+  });
+</script>
 </body>
 </html>

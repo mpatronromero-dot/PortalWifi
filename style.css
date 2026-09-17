@@ -6,19 +6,19 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Fondo de la pantalla completa (COINCIDE CON EL FONDO DE LA IMAGEN) */
+/* Fondo de la pantalla completa*/
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Usamos el color de fondo blanco roto/crema de la imagen (#F0F0F0) */
+    /* Usamos el color de fondo blanco crema (#F0F0F0) */
     background-color: #F0F0F0;
 }
 
 /* Tarjeta del formulario */
 .login-container {
-    /* Color de la tarjeta (COINCIDE CON EL BLANCO DE LA IMAGEN) */
+    /* Color de la tarjeta */
     background-color: #FFFFFF;
     padding: 2.5rem 2rem;
     border-radius: 12px;
@@ -29,9 +29,9 @@ body {
     margin: 1rem;
 }
 
-/* Títulos y texto secundario (COINCIDE CON EL DORADO DE LA IMAGEN) */
+/* Títulos y texto secundario */
 .login-container h2 {
-    /* Color dorado mate/lujo extraído de la imagen (#BF9B30) */
+    /* Color dorado mate/lujo (#BF9B30) */
     color: #BF9B30;
     margin-bottom: 0.5rem;
 }
@@ -74,11 +74,11 @@ body {
     border-color: #BF9B30;
 }
 
-/* Estilo del botón (COINCIDE CON EL AZUL PROFUNDO DE LA IMAGEN) */
+/* Estilo del botón*/
 button {
     width: 100%;
     padding: 0.8rem;
-    /* Color de fondo azul marino muy oscuro extraído de la imagen (#0D3052) */
+    /* Color de fondo azul marino (#0D3052) */
     background-color: #0D3052;
     /* Color de texto blanco puro para el botón (#FFFFFF) */
     color: #FFFFFF;
@@ -89,7 +89,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 1rem;
-    text-transform: uppercase; /* Para que coincida con 'RESERVE AHORA' */
+    text-transform: uppercase; 
 }
 
 button:hover {
